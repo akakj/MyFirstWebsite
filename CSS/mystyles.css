@@ -1,0 +1,460 @@
+@font-face
+{
+    font-family: 'Kalnia';
+    src: url('../Fonts/Kalnia-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kalnia', sans-serif;
+    padding-top: 150px;
+    background-image: url("../Images/background.png");
+}
+
+@keyframes textShadow 
+{
+    from 
+    {
+        text-shadow: 3px 2px 10px rgb(179, 2, 105);
+    }
+    to 
+    {
+        text-shadow: 3px 2px 18px rgb(179, 2, 105);
+    }
+}
+
+@keyframes boxShadow 
+{
+    from 
+    {
+        box-shadow: 3px 2px 2px rgb(179, 2, 105);
+    }
+    to 
+    {
+        box-shadow: 3px 2px 12px 2px rgb(179, 2, 105);
+    }
+}
+
+
+/* ***************************************THE HEADER*************************************** */
+header
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(245, 151, 166);
+    color: white;
+    border: 8px dotted rgb(210, 116, 131);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: fixed;
+    z-index: 1000;
+    line-height: 28.4px;
+    transition: height 0.5s ease, line-height 0.5s ease;
+}
+
+.header-content
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+header:hover
+{
+    height: 178px;
+    line-height: 55px;
+}
+
+#logo
+{
+    margin-left: 3px;
+    border: 4px double rgb(193, 107, 121);
+    border-radius: 38px;
+    filter: drop-shadow(3px -2px 8px  rgb(182, 66, 86));
+}
+
+.navBarList
+{
+    list-style-type: none; /*gets rid of the bullet points in the unordered list*/
+}
+
+a.navBarList
+{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 1.12em;
+}
+
+a.navBarList:hover
+{
+    text-decoration: underline overline;
+    color:rgb(174, 89, 103);
+
+}
+
+#shopping-cart
+{
+    margin-top: -1px;
+}
+
+#shopping-cart:hover
+{
+    filter: drop-shadow(4px 3px 6px rgb(92, 48, 203));
+}
+/* ***************************************THE HEADER*************************************** */
+
+/* ***************************************THE WELCOMING TEXT************************************** */
+div.welcoming-text
+{
+    text-align: center;
+    height: 250px;
+    margin: 2px;
+    opacity: 0; /* Initial opacity set to 0 for the fade-in effect */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animation properties */
+}
+
+@keyframes fadeIn 
+{
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Optional: Add a slight vertical movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+h1.welcoming-text
+{
+    color: rgb(253, 235, 235);
+    font-family: 'Kalnia';
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 3px rgb(218, 0, 105);
+}
+
+h2.welcoming-text
+{
+    font-size: 1.3em;
+    color: rgb(188, 67, 98);
+    font-style: italic;
+    text-shadow: 2px 2px 2px  rgb(255, 243, 254); 
+}
+
+/* ***************************************THE WELCOMING TEXT************************************** */
+
+/* *************************************** PRODUCTS ************************************** */
+
+.order-section
+{
+    margin: 55px 35px 65px;
+    background-color: azure;
+    background-image: url("../Images/lightBlueBackground.png");
+    background-size: cover;
+    border: 5px double rgb(100, 215, 215);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.order-section:after
+{
+    content: "";
+    display: table;
+    clear: both;
+    justify-content: center;
+}
+
+.column
+{
+    padding: 20px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+}
+
+.product-image
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.product-link
+{
+    text-decoration: none;
+}
+
+figure
+{
+    background-color: rgb(255, 255, 195);
+    border: 12px solid transparent;
+    border-radius: 12px;
+    border-image: url("../Images/product_border.png") 30 round;
+    box-shadow: 2px 2px 32px 2px rgb(115, 175, 252);
+}
+
+figure:hover
+{
+    box-shadow: 2px 2px 32px 2px rgb(171, 113, 252);
+}
+
+figcaption
+{
+    margin: 0px;
+    color: rgb(125, 15, 67);
+    background-color: pink;
+    border: 3px solid rgb(249, 147, 164);
+    border-radius: 8px;
+    text-align: center;
+}
+
+figcaption:hover
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(189, 141, 228);
+    border: 3px solid rgb(147, 81, 205);
+}
+
+
+/* *************************************** PRODUCTS ************************************** */
+
+/* *************************************** IMAGE SECTION ************************************** */
+
+div.image-section
+{
+    margin: 30px;
+    background-color: rgb(254, 241, 255);
+    background-size: cover;
+    border: 6px double rgb(222, 83, 187);
+    border-radius: 6px;
+    text-align: center;
+}
+
+div.image-section:after
+{
+    content: "";
+    display: table;
+    clear: both;
+    justify-content: center;
+}
+
+.gallery-image
+{
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    border: 16px solid transparent;
+    border-radius: 25px;
+    border-image: url("../Images/gallery_border.png") 40 round;
+    box-shadow: 2px 2px 15px 3px rgb(190, 190, 190);
+}
+
+/* *************************************** IMAGE SECTION ************************************** */
+
+
+/* *************************************** COMMENT SECTION ************************************** */
+
+#comment-section 
+{
+    margin: 25px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#comment-section-heading
+{
+    font-size: 1.58em;
+    font-weight: bold;
+    padding: 5px;
+    color:  rgb(194, 2, 114);
+    text-shadow: 2px 2px 5px rgb(191, 22, 121);
+    animation: textShadow 0.5s infinite alternate;
+}
+
+.comment 
+{
+    margin: 15px;
+    margin-bottom: 35px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid rgb(194, 2, 114);
+    border-radius: 10px;
+    box-shadow: 2px 2px 30px 2px rgb(183, 70, 136);
+    animation: changeBoxShadow 2.5s infinite alternate;
+}
+
+@keyframes changeBoxShadow {
+    0% {
+        box-shadow: 2px 2px 30px 2px rgb(183, 70, 136);
+    }
+    25% {
+        box-shadow: 4px 4px 35px 4px rgb(183, 70, 136);
+    }
+    50% {
+        box-shadow: 2px 2px 30px 2px rgb(183, 70, 136);
+    }
+    75% {
+        box-shadow: 4px 4px 35px 4px rgb(183, 70, 136);
+    }
+    100% {
+        box-shadow: 2px 2px 30px 2px rgb(183, 70, 136);
+    }
+}
+
+.comment h3 
+{
+    color: rgb(194, 2, 114);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.comment p 
+{
+    margin-bottom: 10px;
+    color: rgb(52, 52, 52);
+    font-size: 0.84em;
+}
+
+.comment:hover 
+{
+    background-color: rgb(250, 250, 250);
+}
+
+/* *************************************** COMMENT SECTION ************************************** */
+
+
+/* *************************************** CONTACT SECTION ************************************** */
+
+#contact-heading
+{
+    margin: 25px;
+    font-family: 'Kalnia';
+    color: rgb(194, 2, 114);
+    text-shadow: 2px 2px 2px  rgb(216, 97, 206);
+    animation: textShadow 0.5s infinite alternate;
+
+}
+
+.contact-info
+{
+    margin: 25px 25px 40px;
+    padding: 15px;
+    line-height: 55px;
+    border: 5px double palevioletred;
+    border-radius: 8px;
+    font-size: 1.16em;
+    color: rgb(194, 2, 114);
+    text-shadow: 3px 2px 8px  rgb(206, 128, 200);
+    animation: boxShadow 0.5s infinite alternate;
+}
+
+.contact-term
+{
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+/* *************************************** CONTACT SECTION ************************************** */
+
+/* ***************************************ABOUT US SECTION ************************************** */
+
+#about-us
+{
+    background-color: rgba(255, 255, 255, 0.294);
+    margin: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(125, 25, 125);
+    font-size: 1.05em;
+
+}
+
+#about-us p::first-letter 
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(220, 70, 95);
+}
+
+/* *************************************** SHOPPING CART SECTION ************************************** */
+
+#shopping-cart-heading
+{
+    margin-top: -35px;
+    margin-left: 18px;
+    font-size: 1.7em;
+    color: rgb(207, 17, 128);
+    text-shadow: 3px 2px 15px rgb(162, 0, 95);
+    animation: textShadow 0.5s infinite alternate;
+}
+
+#shopping-cart-content
+{
+    margin: 30px 35px 55px 35px; 
+    height: 500px; 
+    border: 5px double palevioletred; 
+    border-radius: 5px;
+    animation: boxShadow 0.5s infinite alternate;
+}
+
+/* *************************************** SHOPPING CART SECTION ************************************** */
+
+/* *************************************** ABOUT US SECTION ************************************** */
+
+footer
+{
+    background-color:  rgb(245, 151, 166);
+    color: rgb(242, 242, 242);
+    width: 100%;
+    height: 135px;
+    border:  2px inset  rgb(240, 185, 185);
+}
+
+.social-media a
+{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: bold;
+    color: white;
+}
+
+.social-media a:hover
+{
+    text-decoration: underline;
+}
+
+.social-media a:visited
+{
+    color: white;
+
+}
+
+#copyright
+{
+    margin: 5px;
+    font-size: 0.85em;
+
+}
